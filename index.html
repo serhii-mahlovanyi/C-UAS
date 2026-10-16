@@ -248,6 +248,63 @@ button{font-family:inherit;color:inherit}
 .phase.opsph .phase-h{background:var(--green-bg)}
 .phase.opsph .letter{background:#15803d}
 .srow.hl{background:var(--green-bg);border-left:3px solid var(--green)}
+
+/* v4 feedback */
+:root{--fb:#2563eb;--fb-bg:#eff6ff}
+.wrap{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))!important}
+#gate{padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+.fb-hint{margin-top:8px;font-size:12px;color:var(--muted)}
+.fb-hint b{color:var(--fb)}
+.fb-fab{position:fixed;right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:70;display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 18px 0 15px;border-radius:999px;border:none;background:var(--fb);color:#fff;font:600 14.5px "Space Grotesk",sans-serif;box-shadow:0 10px 28px rgba(37,99,235,.38);cursor:pointer;transition:bottom .2s,background .2s}
+.fb-fab svg{width:20px;height:20px;flex:none}
+.fb-fab b{position:absolute;top:-6px;right:-4px;min-width:22px;height:22px;border-radius:11px;background:var(--red);color:#fff;font:700 12px "Inter",sans-serif;display:grid;place-items:center;padding:0 6px;border:2px solid #fff}
+body.cm .fb-fab{display:none}
+.fb-bar{position:fixed;left:10px;right:10px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:70;display:flex;align-items:center;gap:8px;padding:10px 10px 10px 16px;border-radius:18px;background:var(--fb);color:#fff;box-shadow:0 12px 30px rgba(37,99,235,.35);max-width:620px;margin:0 auto}
+.fb-bar span{flex:1;font:600 13.5px/1.3 "Space Grotesk",sans-serif}
+.fb-bar button{flex:none;border:none;border-radius:12px;padding:9px 12px;font:600 13px "Inter",sans-serif;cursor:pointer;background:rgba(255,255,255,.18);color:#fff}
+.fb-bar button.w{background:#fff;color:var(--fb)}
+@keyframes fbp{0%,100%{box-shadow:inset 0 0 0 2px var(--fb),0 0 0 3px rgba(37,99,235,.10)}50%{box-shadow:inset 0 0 0 2px var(--fb),0 0 0 7px rgba(37,99,235,.20)}}
+body.cm [data-fb]{animation:fbp 1.6s ease-in-out infinite;cursor:copy;background-color:var(--fb-bg)}
+body.cm .band[data-fb]{background-color:var(--ink)}
+body.cm .band.red[data-fb]{background-color:var(--red)}
+body.cm .hero[data-fb] .hero-top{opacity:.92}
+body.cm .step:hover,body.cm .next:hover{transform:none}
+.fb-picked{box-shadow:inset 0 0 0 3px var(--fb)!important}
+.fb-scrim{position:fixed;inset:0;z-index:80;background:rgba(20,28,44,.42);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.fb-sheet{position:absolute;left:0;right:0;bottom:0;max-width:620px;margin:0 auto;background:var(--card);border-radius:22px 22px 0 0;box-shadow:var(--shadow-lg);max-height:90svh;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:8px 18px calc(18px + env(safe-area-inset-bottom,0px));animation:rise .2s ease}
+.fb-grab{width:40px;height:5px;border-radius:3px;background:var(--line-2);margin:4px auto 12px}
+.fb-h{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;margin-bottom:10px}
+.fb-k{font:600 11.5px "Space Grotesk",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--fb)}
+.fb-t{font:600 16px/1.3 "Space Grotesk",sans-serif;margin-top:4px}
+.fb-q{font-size:13px;line-height:1.5;color:var(--muted);padding:10px 12px;border-left:3px solid var(--fb);background:var(--fb-bg);border-radius:10px;margin-bottom:12px}
+.fb-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.fb-chips button{border:1px solid var(--line-2);background:var(--card-2);border-radius:999px;padding:7px 12px;font:600 12.5px "Inter",sans-serif;cursor:pointer;color:var(--ink-2)}
+.fb-chips button.on{background:var(--fb);border-color:var(--fb);color:#fff}
+.fb-sheet textarea,.fb-sheet input{width:100%;font:400 16px/1.45 "Inter",sans-serif;color:var(--ink);background:var(--card-2);border:1px solid var(--line-2);border-radius:14px;padding:12px 13px;outline:none;-webkit-appearance:none}
+.fb-sheet textarea{min-height:120px;resize:vertical}
+.fb-sheet textarea:focus,.fb-sheet input:focus{border-color:var(--fb);box-shadow:0 0 0 3px rgba(37,99,235,.15)}
+.fb-sheet textarea.err{border-color:var(--red);box-shadow:0 0 0 3px rgba(220,38,38,.15)}
+.fb-mic{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--muted);margin:7px 0 14px}
+.fb-mic svg{width:16px;height:16px;flex:none;color:var(--fb)}
+.fb-btns{display:flex;gap:8px;flex-wrap:wrap}
+.fb-btns>*{flex:1 1 140px;display:inline-flex;align-items:center;justify-content:center;gap:7px;border-radius:14px;padding:13px 14px;font:600 14px "Inter",sans-serif;cursor:pointer;text-decoration:none;border:1px solid var(--line-2);background:var(--card-2);color:var(--ink)}
+.fb-btns>* svg{width:18px;height:18px;flex:none}
+.fb-btns .pri{background:var(--fb);border-color:var(--fb);color:#fff}
+.fb-btns .dark{background:var(--ink);border-color:var(--ink);color:#fff}
+.fb-list{display:grid;gap:8px;margin:4px 0 14px}
+.fb-item{display:flex;gap:10px;padding:11px 12px;border-radius:14px;border:1px solid var(--line-2);background:var(--card-2)}
+.fb-item .n{flex:none;width:24px;height:24px;border-radius:50%;background:var(--fb);color:#fff;display:grid;place-items:center;font:700 11px "Space Grotesk",sans-serif}
+.fb-item .w{font:600 13px/1.35 "Space Grotesk",sans-serif}
+.fb-item .m{font-size:11.5px;color:var(--muted);margin-top:2px}
+.fb-item .c{font-size:13.5px;line-height:1.5;color:var(--ink-2);margin-top:5px;white-space:pre-wrap;word-break:break-word}
+.fb-item .del{flex:none;align-self:flex-start;border:none;background:none;color:var(--muted);font-size:20px;line-height:1;cursor:pointer;padding:0 2px}
+.fb-lab{font:600 11.5px "Space Grotesk",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:2px 0 7px}
+.fb-alt{display:flex;align-items:center;gap:7px;width:100%;margin-top:10px;border:none;background:none;padding:6px 2px;font:500 12.5px/1.4 "Inter",sans-serif;color:var(--fb);text-align:left;cursor:pointer}
+.fb-alt svg{width:15px;height:15px;flex:none}
+.fb-done{margin-top:10px;width:100%;border:1px dashed var(--line-2);background:none;border-radius:14px;padding:11px;font:600 13px "Inter",sans-serif;color:var(--muted);cursor:pointer}
+.fb-to{font-size:12px;color:var(--muted);margin:10px 0 0;text-align:center}
+.fb-toast{position:fixed;left:50%;top:calc(16px + env(safe-area-inset-top,0px));transform:translateX(-50%);z-index:90;background:var(--ink);color:#fff;padding:11px 16px;border-radius:14px;font:600 13.5px "Inter",sans-serif;box-shadow:var(--shadow-lg);max-width:calc(100% - 32px);text-align:center;animation:rise .2s ease}
+@media (prefers-reduced-motion:reduce){body.cm [data-fb]{animation:none;box-shadow:inset 0 0 0 2px var(--fb)}}
 </style>
 </head>
 <body>
@@ -286,6 +343,7 @@ button{font-family:inherit;color:inherit}
           <div class="knob" id="knob"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3"/></svg></div>
         </div>
         <div class="hint">Потягніть важіль до кінця вліво, щоб почати</div>
+        <div class="fb-hint">Є зауваження? Кнопка <b>«Відгук»</b> – праворуч унизу.</div>
       </div>
     </div>
   </section>
@@ -387,6 +445,12 @@ button{font-family:inherit;color:inherit}
   </section>
 </div>
 <div id="modalRoot"></div>
+<div class="fb-ui">
+  <button id="fbFab" class="fb-fab" aria-label="Залишити відгук"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg><span id="fbFabL">Відгук</span><b id="fbBadge" hidden>0</b></button>
+  <div id="fbBar" class="fb-bar" hidden><span>Торкніться блоку, який хочете прокоментувати</span><button class="w" id="fbBarSend" hidden>Надіслати</button><button id="fbCancel">Скасувати</button></div>
+  <div id="fbScrim" class="fb-scrim" hidden><div class="fb-sheet" id="fbSheet" role="dialog" aria-modal="true" aria-label="Відгук"></div></div>
+  <div id="fbToast" class="fb-toast" hidden></div>
+</div>
 
 <script>
 const MORE='<span class="more">Детальніше <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg></span>';
@@ -479,7 +543,7 @@ function openStep(i){const s=STEPS[i];
   <div class="modal-h"><div><div class="when">Крок ${s.n} з ${STEPS.length}</div><h3>${s.title}</h3></div>
   <button class="modal-x" id="mx" aria-label="Закрити">×</button></div>
   <div class="modal-body">${s.body}</div>${nav}</div></div>`;
- const scrim=document.getElementById('scrim');
+ tagModal(i);const scrim=document.getElementById('scrim');
  scrim.addEventListener('click',e=>{if(e.target===scrim)closeModal();});
  document.getElementById('mx').addEventListener('click',closeModal);
  scrim.querySelectorAll('[data-to]').forEach(b=>b.addEventListener('click',()=>openStep(+b.dataset.to)));
@@ -520,7 +584,7 @@ function resetLever(animate){dragging=false;track.classList.remove('grabbing');
 function commit(dir){if(committed)return;committed=true;resetLever(true);clearTimeout(goTimer);
  goTimer=setTimeout(()=>{committed=false;show(dir<0?'p1':'p2');},190);}
 const cx=e=>(e.touches&&e.touches.length?e.touches[0]:(e.changedTouches&&e.changedTouches.length?e.changedTouches[0]:e)).clientX;
-function pDown(e){if(committed)return;dragging=true;track.classList.add('grabbing');knob.style.transition='none';startX=cx(e);startDx=dx;if(e.cancelable)e.preventDefault();}
+function pDown(e){if(committed||document.body.classList.contains('cm'))return;dragging=true;track.classList.add('grabbing');knob.style.transition='none';startX=cx(e);startDx=dx;if(e.cancelable)e.preventDefault();}
 function pMove(e){if(!dragging||committed)return;if(e.cancelable)e.preventDefault();
  const r=setKnob(startDx+cx(e)-startX);if(r<=-0.85)commit(-1);else if(r>=0.85)commit(1);}
 function pUp(){if(!dragging)return;dragging=false;track.classList.remove('grabbing');if(committed)return;
@@ -533,6 +597,109 @@ window.addEventListener('resize',()=>{if(!dragging)resetLever(false);});
 window.addEventListener('pageshow',()=>resetLever(false));
 resetLever(false);
 {const h=(location.hash||'').replace('#','');if(h==='p1'||h==='p2')show(h);}
+
+/* ===== feedback ===== */
+const FB_TO='serhii.mahlovanyi@gmail.com',FB_DOC='Єдиний порядок опрацювання запитів щодо інцидентів за участю БпС',FB_VER='v5 · 16.10.2026';
+const FB_TYPES=['Незрозуміло','Додати','Змінити','Прибрати','Інше'];
+const fbS={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v);}catch(e){return d;}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}};
+let fbQ=fbS.get('cuas_fb_q',[]);if(!Array.isArray(fbQ))fbQ=[];
+let fbPicked=null,fbType='',fbShared=false;
+const q$=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const snip=(el,n)=>{const t=(el.innerText||el.textContent||'').replace(/\s+/g,' ').trim();return t.length>n?t.slice(0,n).trim()+'…':t;};
+const pad=n=>String(n).padStart(2,'0');
+const stamp=()=>{const d=new Date();return `${pad(d.getDate())}.${pad(d.getMonth()+1)}.${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())}`;};
+function tag(el,l){if(el)el.setAttribute('data-fb',l);}
+function tagAll(){
+ tag(q$('#gate .hero'),'Обкладинка');
+ const p1=q$('#p1');tag(p1.querySelector('.l-hero'),'Ч1 · Вступ');tag(p1.querySelector('.prob'),'Ч1 · Проблема');
+ const b=p1.querySelectorAll('.band');tag(b[0],'Ч1 · Проблема · висновок');tag(b[1],'Ч1 · Очікуваний результат · підсумок');
+ p1.querySelectorAll('.step').forEach((el,i)=>tag(el,`Ч1 · Крок ${STEPS[i].n}: ${STEPS[i].title}`));
+ p1.querySelectorAll('.layer').forEach((el,i)=>tag(el,`Ч1 · Рівень ${i+1}: ${el.querySelector('h3').textContent}`));
+ p1.querySelectorAll('.tl li').forEach(el=>tag(el,`Ч1 · Етап ${el.querySelector('.ph').textContent}: ${el.querySelector('.tt').textContent}`));
+ tag(p1.querySelector('.flow'),'Ч1 · Очікуваний результат');
+ const p2=q$('#p2');tag(p2.querySelector('.l-hero'),'Ч2 · Вступ');
+ p2.querySelectorAll('.phase').forEach((ph,i)=>{const P=ABC[i];tag(ph.querySelector('.phase-h'),`Ч2 · Фаза ${P.L} · ${P.name}`);
+  ph.querySelectorAll('.srow').forEach((r,j)=>{const s=P.steps[j];tag(r,`Ч2 · ${P.L} · ${s.n}. ${s.t} (${s.u})`);});});
+ tag(p2.querySelector('.loop'),'Ч2 · Цикл: повернення до Agree');tag(p2.querySelector('.band'),'Ч2 · Ключовий принцип');
+}
+function tagModal(i){const s=STEPS[i],b=q$('.modal-body');if(!b)return;
+ b.querySelectorAll(':scope > p, .why > div, .note, .blist li').forEach(el=>tag(el,`Ч1 · Крок ${s.n} · деталі: «${snip(el,40)}»`));}
+const fab=q$('#fbFab'),bar=q$('#fbBar'),barSend=q$('#fbBarSend'),scrimF=q$('#fbScrim'),sheet=q$('#fbSheet'),badge=q$('#fbBadge'),fabL=q$('#fbFabL');
+function fbSync(){fbS.set('cuas_fb_q',fbQ);badge.hidden=!fbQ.length;badge.textContent=fbQ.length;
+ barSend.hidden=!fbQ.length;barSend.textContent=`Надіслати (${fbQ.length})`;}
+function toast(t){const el=q$('#fbToast');el.textContent=t;el.hidden=false;clearTimeout(toast._t);toast._t=setTimeout(()=>el.hidden=true,2600);}
+function enterCM(){document.body.classList.add('cm');bar.hidden=false;fabL.textContent='Скасувати';}
+function exitCM(){document.body.classList.remove('cm');bar.hidden=true;fabL.textContent='Відгук';}
+function closeSheet(){scrimF.hidden=true;sheet.innerHTML='';if(fbPicked){fbPicked.classList.remove('fb-picked');fbPicked=null;}}
+fab.addEventListener('click',()=>{if(!scrimF.hidden)closeSheet();document.body.classList.contains('cm')?exitCM():enterCM();});
+q$('#fbCancel').addEventListener('click',exitCM);
+barSend.addEventListener('click',()=>{exitCM();openSend();});
+document.addEventListener('click',e=>{
+ if(!document.body.classList.contains('cm'))return;
+ if(e.target.closest('.fb-ui')||e.target.closest('.dock'))return;
+ e.preventDefault();e.stopPropagation();
+ const el=e.target.closest('[data-fb]');if(!el)return;
+ exitCM();openCompose(el);
+},true);
+document.addEventListener('keydown',e=>{if(e.key!=='Escape')return;if(!scrimF.hidden)closeSheet();else if(document.body.classList.contains('cm'))exitCM();});
+scrimF.addEventListener('click',e=>{if(e.target===scrimF)closeSheet();});
+const MIC='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></svg>';
+function openCompose(el){
+ fbPicked=el;el.classList.add('fb-picked');fbType='';
+ const where=el.getAttribute('data-fb'),quote=snip(el,160);
+ sheet.innerHTML=`<div class="fb-grab"></div>
+ <div class="fb-h"><div><div class="fb-k">Коментар до блоку</div><div class="fb-t">${esc(where)}</div></div><button class="modal-x" data-x aria-label="Закрити">×</button></div>
+ <div class="fb-q">«${esc(quote)}»</div>
+ <div class="fb-chips">${FB_TYPES.map(t=>`<button type="button" data-t="${t}">${t}</button>`).join('')}</div>
+ <textarea id="fbText" placeholder="Що незрозуміло, що додати, змінити або прибрати?"></textarea>
+ <div class="fb-mic">${MIC}<span>Щоб надиктувати – натисніть мікрофон на клавіатурі</span></div>
+ <div class="fb-btns"><button type="button" data-more>+ Ще коментар</button><button type="button" class="pri" data-go2>Далі – надіслати</button></div>`;
+ scrimF.hidden=false;sheet.scrollTop=0;
+ sheet.querySelector('[data-x]').addEventListener('click',closeSheet);
+ sheet.querySelectorAll('[data-t]').forEach(b=>b.addEventListener('click',()=>{fbType=fbType===b.dataset.t?'':b.dataset.t;
+  sheet.querySelectorAll('[data-t]').forEach(x=>x.classList.toggle('on',x.dataset.t===fbType));}));
+ const ta=sheet.querySelector('#fbText');ta.addEventListener('input',()=>ta.classList.remove('err'));
+ const save=()=>{const t=ta.value.trim();if(!t){ta.classList.add('err');ta.focus();return false;}
+  fbQ.push({t:stamp(),where,type:fbType,quote:snip(el,120),text:t});fbShared=false;fbSync();return true;};
+ sheet.querySelector('[data-more]').addEventListener('click',()=>{if(!save())return;closeSheet();toast('Збережено. Оберіть наступний блок');enterCM();});
+ sheet.querySelector('[data-go2]').addEventListener('click',()=>{if(!save())return;closeSheet();openSend();});
+ setTimeout(()=>{try{ta.focus({preventScroll:true});}catch(e){}},250);
+}
+function buildMsg(){const name=(fbS.get('cuas_fb_name','')||'').trim();
+ let s=`Відгук на документ «${FB_DOC}» (${FB_VER})\n`+(name?`Від: ${name}\n`:'')+`Коментарів: ${fbQ.length}\n\n`;
+ fbQ.forEach((c,i)=>{s+=`${i+1}) [${c.t}] ${c.where}\n`+(c.type?`Тип: ${c.type}\n`:'')+`Фрагмент: «${c.quote}»\nКоментар: ${c.text}\n\n`;});
+ return {subj:`Відгук · Єдиний порядок БпС · ${fbQ.length} ${fbQ.length===1?'коментар':'коментарі(в)'}`,body:s.trim()};}
+function mailHref(){const m=buildMsg();return `mailto:${FB_TO}?subject=${encodeURIComponent(m.subj)}&body=${encodeURIComponent(m.body)}`;}
+function copyText(t){const fb=()=>{const a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.cssText='position:fixed;top:-1000px;opacity:0';document.body.appendChild(a);a.select();a.setSelectionRange(0,t.length);let ok=false;try{ok=document.execCommand('copy');}catch(e){}a.remove();return ok;};
+ if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t).then(()=>true,()=>fb());}return Promise.resolve(fb());}
+function openSend(){
+ if(!fbQ.length){toast('Немає коментарів');return;}
+ const ENV='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>';
+ const CHAT='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>';
+ const CP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+ sheet.innerHTML=`<div class="fb-grab"></div>
+ <div class="fb-h"><div><div class="fb-k">Надіслати відгук</div><div class="fb-t">${fbQ.length} ${fbQ.length===1?'коментар':'коментарі(в)'}</div></div><button class="modal-x" data-x aria-label="Закрити">×</button></div>
+ <div class="fb-list">${fbQ.map((c,i)=>`<div class="fb-item"><span class="n">${i+1}</span><div style="flex:1;min-width:0"><div class="w">${esc(c.where)}</div><div class="m">${esc(c.t)}${c.type?' · '+esc(c.type):''}</div><div class="c">${esc(c.text)}</div></div><button class="del" data-del="${i}" aria-label="Видалити">×</button></div>`).join('')}</div>
+ <div class="fb-lab">Ваше ім'я та посада · необов'язково</div>
+ <input id="fbName" autocomplete="name" placeholder="Напр.: Іван Петренко, ГШ ЗСУ" value="${esc(fbS.get('cuas_fb_name',''))}">
+ <div style="height:12px"></div>
+ <div class="fb-btns"><a class="pri" id="fbMail" href="${mailHref()}">${ENV}Надіслати поштою</a></div>
+ <div class="fb-btns" style="margin-top:8px"><button type="button" id="fbAdd">+ Ще коментар</button></div>
+ <button type="button" class="fb-alt" id="fbCopy">${CP}Пошта не відкрилася? Скопіювати текст і надіслати на ${FB_TO}</button>
+ <button type="button" class="fb-done" id="fbClear">Надіслано – очистити список</button>
+ <div class="fb-to">Усі відгуки надходять одному адресату: ${FB_TO}</div>`;
+ scrimF.hidden=false;sheet.scrollTop=0;
+ const mail=sheet.querySelector('#fbMail'),nm=sheet.querySelector('#fbName');
+ nm.addEventListener('input',()=>{fbS.set('cuas_fb_name',nm.value);mail.href=mailHref();});
+ mail.addEventListener('click',()=>{fbS.set('cuas_fb_name',nm.value);mail.href=mailHref();fbShared=true;});
+ sheet.querySelector('[data-x]').addEventListener('click',closeSheet);
+ sheet.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',()=>{fbQ.splice(+b.dataset.del,1);fbSync();fbQ.length?openSend():closeSheet();}));
+ sheet.querySelector('#fbAdd').addEventListener('click',()=>{closeSheet();enterCM();});
+ sheet.querySelector('#fbCopy').addEventListener('click',()=>{const m=buildMsg();copyText(m.subj+'\n\n'+m.body).then(ok=>toast(ok?`Скопійовано – вставте в лист на ${FB_TO}`:'Не вдалося скопіювати'));});
+ sheet.querySelector('#fbClear').addEventListener('click',()=>{fbQ=[];fbSync();closeSheet();toast('Дякуємо! Список очищено');});
+}
+tagAll();fbSync();
 </script>
 </body>
 </html>
